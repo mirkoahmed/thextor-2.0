@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/left_border"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/right_border"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/top_border_edge"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/top_border_edge">
+
+        <TextView
+            android:id="@+id/btn_open"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_open"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:ellipsize="end"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="VisualLintSystemUi" />
+
+        <View
+            android:id="@+id/sep1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/btn_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_new"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:ellipsize="end"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="VisualLintSystemUi" />
+
+        <View
+            android:id="@+id/sep2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/btn_undo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_undo"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="VisualLintSystemUi" />
+
+        <View
+            android:id="@+id/path_sep1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/btn_redo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_redo"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="VisualLintSystemUi" />
+
+        <View
+            android:id="@+id/path_sep2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/btn_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_font"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:ellipsize="end"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="UseContrastColor,VisualLintSystemUi" />
+
+        <View
+            android:id="@+id/sep4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_save"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
+            android:minHeight="48dp"
+            android:ellipsize="end"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            tools:ignore="VisualLintSystemUi" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_border"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <TextView
+        android:id="@+id/txt_file_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/default_filename"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/bottom_border"
+        tools:ignore="TextContrastCheck" />
+
+    <View
+        android:id="@+id/path_bottom_border"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/txt_file_path" />
+
+    <EditText
+        android:id="@+id/editor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:fontFamily="@font/spleen"
+        android:gravity="top|start"
+        android:hint="@string/hint_editor"
+        android:textColorHint="@color/hint_color"
+        android:textSize="18sp"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:padding="7dp"
+        android:textCursorDrawable="@drawable/block_cursor"
+        app:layout_constraintBottom_toTopOf="@id/screen_bottom_border"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/path_bottom_border"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <View
+        android:id="@+id/screen_bottom_border"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/separator_color"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/right_border"
+        app:layout_constraintStart_toEndOf="@id/left_border" />
+
+    <LinearLayout
+        android:id="@+id/notice_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_bg"
+        android:clickable="false"
+        android:elevation="10dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:visibility="gone"
+        android:accessibilityLiveRegion="polite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/txt_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spleen"
+            android:gravity="center"
+            android:textColor="@color/lichen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Notice Message" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
